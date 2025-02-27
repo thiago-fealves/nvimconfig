@@ -10,8 +10,8 @@ Requisitos
 
 Passos:
 1.	Clone o repositório:
-```shell
-    git clone https://github.com/thiago-fealves/nvimconfig ~/.config/nvim
+```sh
+git clone https://github.com/thiago-fealves/nvimconfig ~/.config/nvim
 ```
 2.	Abra o Neovim. O Lazy.nvim cuidará da instalação automática das dependências.
 3.	Configure as permissões necessárias, se aplicável.
