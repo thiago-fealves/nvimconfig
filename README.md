@@ -25,8 +25,8 @@ A configuração usa o `Lazy.nvim` para instalar e atualizar os plugins automati
 ## Plugins Principais
 - [Lazy.nvim](https://github.com/folke/lazy.nvim) – Gerenciador de plugins
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim) – Pesquisa e navegação rápida
-- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) – Melhor realce de sintaxe e estrutura do código
-- [LSP](https://github.com/neovim/nvim-lspconfig) – Suporte a linguagens com autocomplete e diagnósticos
+- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) – Syntax Highlighting e estrutura do código
+- [LSP](https://github.com/neovim/nvim-lspconfig) – Suporte a linguagens com autocomplete e checagem de erros inline
 - [Dashboard-nvim](https://github.com/glepnir/dashboard-nvim) – Tela inicial customizada
 - [ToggleTerm](https://github.com/akinsho/toggleterm.nvim) – Terminal integrado
 - [Harpoon](https://github.com/ThePrimeagen/harpoon) – Navegação rápida entre arquivos
