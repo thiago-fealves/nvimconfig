@@ -1,14 +1,14 @@
-🚀 Configurações do Neovim
+# 🚀 Neovim Dotfiles
 
 Esta configuração do Neovim foi criada para otimizar o workflow e manter a simplicidade. Está em constante evolução para melhorar a produtividade sem comprometer a leveza do editor.
 
-📥 Instalação
+# 📥 Instalação
 
-Requisitos
-	•	Neovim instalado
+**Requisitos:**
+	•	Neovim
 	•	Git
-
-Passos:
+ 
+**Passos:**
 1.	Clone o repositório:
 ```sh
 git clone https://github.com/thiago-fealves/nvimconfig ~/.config/nvim
@@ -16,13 +16,13 @@ git clone https://github.com/thiago-fealves/nvimconfig ~/.config/nvim
 2.	Abra o Neovim. O Lazy.nvim cuidará da instalação automática das dependências.
 3.	Configure as permissões necessárias, se aplicável.
 
-📦 Plugins e Funcionalidades
+# 📦 Plugins e Funcionalidades
 
-Gerenciamento de Plugins
+## Gerenciamento de Plugins
 
-A configuração usa o Lazy.nvim para gerenciar os plugins automaticamente.
+A configuração usa o Lazy.nvim para instalar e atualizar os plugins automaticamente.
 
-Plugins Principais
+## Plugins Principais
 	•	Lazy.nvim – Gerenciador de plugins
 	•	Telescope – Pesquisa e navegação rápida
 	•	Treesitter – Melhor realce de sintaxe e estrutura do código
@@ -33,7 +33,7 @@ Plugins Principais
 	•	Undotree – Histórico de alterações
 	•	Autoclose – Fechamento automático de parênteses e aspas
 
-📁 Estrutura dos Arquivos de Configuração
+# 📁 Estrutura dos Arquivos de Configuração
 
 Os arquivos de configuração estão organizados da seguinte forma:
 ```
@@ -49,13 +49,13 @@ Os arquivos de configuração estão organizados da seguinte forma:
 │   ├── treesitter.lua   # Configuração do Treesitter
 │   ├── undotree.lua     # Configuração do Undotree
 ```
-🎨 Aparência e Temas
+# 🎨 Aparência e Temas
 	•	Tema baseado no Neon Lights
 	•	Fonte: Hack Nerd Font
 	•	Ícones das próprias NerdFonts
 	•	Configuração personalizada de cores no arquivo colors.lua
 
-⚡ Ferramentas de Produtividade
+# ⚡ Ferramentas de Produtividade
 	•	Telescope para busca eficiente
 	•	Treesitter para parsing avançado de código
 	•	LSP para suporte a várias linguagens
@@ -63,10 +63,7 @@ Os arquivos de configuração estão organizados da seguinte forma:
 	•	Undotree para gerenciamento de histórico
 	•	Terminal Integrado via ToggleTerm
 
-🛠 Personalização e Manutenção
+# 🛠 Personalização e Manutenção
 
-Esta configuração está sempre sendo ajustada para melhor atender ao workflow. Para customizações, basta editar os arquivos dentro de ~/.config/nvim/ e reiniciar o Neovim.
-
-🤝 Contribuição
-
-Se quiser sugerir melhorias ou adaptar algo, fique à vontade para abrir um pull request ou forkar o repositório!
+Esta configuração está sempre sendo ajustada para melhor atender ao meu workflow, qualquer sugestão será muito bem vinda!!
+Para modificar e customizar basta abrir o init.lua e alterar propriedades, temas e plugins
