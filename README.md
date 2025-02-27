@@ -5,8 +5,8 @@ Esta configuração do Neovim foi criada para otimizar o workflow e manter a sim
 # 📥 Instalação
 
 **Requisitos:**
-	•	Neovim
-	•	Git
+- Neovim
+- Git
  
 **Passos:**
 1.	Clone o repositório:
