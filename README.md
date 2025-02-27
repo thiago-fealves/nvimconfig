@@ -18,7 +18,7 @@ git clone https://github.com/thiago-fealves/nvimconfig ~/.config/nvim
 
 # 📦 Plugins e Funcionalidades
 
-## Gerenciamento de Plugins
+**Gerenciamento de Plugins**
 
 A configuração usa o Lazy.nvim para instalar e atualizar os plugins automaticamente.
 
