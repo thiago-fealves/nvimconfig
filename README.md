@@ -1,4 +1,5 @@
 # 🚀 Neovim Dotfiles
+<img width="1675" alt="image" src="https://github.com/user-attachments/assets/6673b4ff-ef1c-466f-a88e-3517cffc27fa" />
 
 Esta configuração do Neovim foi criada para otimizar meu workflow mantendo a simplicidade. Valorizo muito a leveza do meu editor, mesmo faço algumas alterações com frequência, portanto esse repositório muito provavelmente vai ser atualizado com frequência
 
