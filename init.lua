@@ -80,4 +80,4 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = false },
 })
-
+vim.cmd([[highlight Comment guifg=#c0c0c0 ctermfg=250]])
