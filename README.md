@@ -1,6 +1,6 @@
 # 🚀 Neovim Dotfiles
 
-Esta configuração do Neovim foi criada para otimizar o workflow e manter a simplicidade. Está em constante evolução para melhorar a produtividade sem comprometer a leveza do editor.
+Esta configuração do Neovim foi criada para otimizar meu workflow mantendo a simplicidade. Valorizo muito a leveza do meu editor, mesmo faço algumas alterações com frequência, portanto esse repositório muito provavelmente vai ser atualizado com frequência
 
 # 📥 Instalação
 
@@ -20,18 +20,18 @@ git clone https://github.com/thiago-fealves/nvimconfig ~/.config/nvim
 
 **Gerenciamento de Plugins**
 
-A configuração usa o Lazy.nvim para instalar e atualizar os plugins automaticamente.
+A configuração usa o `Lazy.nvim` para instalar e atualizar os plugins automaticamente.
 
 ## Plugins Principais
-	•	Lazy.nvim – Gerenciador de plugins
-	•	Telescope – Pesquisa e navegação rápida
-	•	Treesitter – Melhor realce de sintaxe e estrutura do código
-	•	LSP – Suporte a linguagens com autocomplete e diagnósticos
-	•	Dashboard-nvim – Tela inicial customizada
-	•	ToggleTerm – Terminal integrado
-	•	Harpoon – Navegação rápida entre arquivos
-	•	Undotree – Histórico de alterações
-	•	Autoclose – Fechamento automático de parênteses e aspas
+- [Lazy.nvim](https://github.com/folke/lazy.nvim) – Gerenciador de plugins
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim) – Pesquisa e navegação rápida
+- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) – Melhor realce de sintaxe e estrutura do código
+- [LSP](https://github.com/neovim/nvim-lspconfig) – Suporte a linguagens com autocomplete e diagnósticos
+- [Dashboard-nvim](https://github.com/glepnir/dashboard-nvim) – Tela inicial customizada
+- [ToggleTerm](https://github.com/akinsho/toggleterm.nvim) – Terminal integrado
+- [Harpoon](https://github.com/ThePrimeagen/harpoon) – Navegação rápida entre arquivos
+- [Undotree](https://github.com/mbbill/undotree) – Histórico de alterações
+- [Autoclose](https://github.com/m4xshen/autoclose.nvim) – Fechamento automático de parênteses e aspas
 
 # 📁 Estrutura dos Arquivos de Configuração
 
@@ -50,18 +50,18 @@ Os arquivos de configuração estão organizados da seguinte forma:
 │   ├── undotree.lua     # Configuração do Undotree
 ```
 # 🎨 Aparência e Temas
-	•	Tema baseado no Neon Lights
-	•	Fonte: Hack Nerd Font
-	•	Ícones das próprias NerdFonts
-	•	Configuração personalizada de cores no arquivo colors.lua
+- Tema baseado no Neon Lights
+- Fonte: Hack Nerd Font
+- Ícones das próprias NerdFonts
+- Configuração personalizada de cores no arquivo colors.lua
 
 # ⚡ Ferramentas de Produtividade
-	•	Telescope para busca eficiente
-	•	Treesitter para parsing avançado de código
-	•	LSP para suporte a várias linguagens
-	•	Harpoon para alternância rápida entre arquivos
-	•	Undotree para gerenciamento de histórico
-	•	Terminal Integrado via ToggleTerm
+- Telescope para busca eficiente
+- Treesitter para parsing avançado de código
+- LSP para suporte a várias linguagens
+- Harpoon para alternância rápida entre arquivos
+- Undotree para gerenciamento de histórico
+- Terminal Integrado via ToggleTerm
 
 # 🛠 Personalização e Manutenção
 
