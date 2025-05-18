@@ -71,3 +71,4 @@ cmp.setup({
 
   }),
 })
+require('lspconfig').ts_ls.setup({})

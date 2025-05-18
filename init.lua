@@ -26,17 +26,67 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
       {
+        'nvim-tree/nvim-tree.lua',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function()
+        require("nvim-tree").setup()
+        end
+      },
+      {
+        'prettier/vim-prettier',
+        run = 'npm install --frozen-lockfile --production'
+      },
+      {
+        "nosduco/remote-sshfs.nvim",
+        dependencies = { "nvim-telescope/telescope.nvim" },
+        config = function()
+        require("remote-sshfs").setup()
+        require("telescope").load_extension("remote-sshfs")
+        end,
+      },
+     {
+        "windwp/nvim-ts-autotag",
+        event = "InsertEnter",
+        config = function()
+          require("nvim-ts-autotag").setup()
+       end,
+      },
+      {
           'nvim-telescope/telescope.nvim',
           version = '0.1.8', -- ou use `branch = '0.1.x'`
           dependencies = { 'nvim-lua/plenary.nvim' },
           lazy = false
       },
-      --{
-      --    'bluz71/vim-moonfly-colors',
-      --    config = function()
-      --        vim.cmd [[colorscheme moonfly]]
-      --    end,
-      --},
+      {
+        'pocco81/auto-save.nvim',
+        config = function()
+          require("auto-save").setup {
+            enabled = true,
+            execution_message = {
+              message = function() return "AutoSave: " .. vim.fn.strftime("%H:%M:%S") end,
+              dim = 0.18,
+              cleaning_interval = 1250,
+            },
+            trigger_events = {"InsertLeave", "TextChanged"},
+            conditions = {
+              exists = true,
+              filetype_is_not = {"markdown"},
+              modifiable = true
+            },
+            write_all_buffers = false,
+         }
+        end
+      },
+      {
+        "plasticboy/vim-markdown",
+        dependencies = { "godlygeek/tabular" }, -- Para formatação de tabelas
+        ft = { "markdown" },
+        config = function()
+        vim.g.vim_markdown_folding_disabled = 0 -- Habilita folding de cabeçalhos
+        vim.g.vim_markdown_conceal = 0 -- Exibe links e imagens corretamente
+        vim.g.vim_markdown_new_list_item_indent = 0 -- Não indenta listas automaticamente
+        end,
+      },
       {"saltmade/citylights.vim"}, 
       {'akinsho/toggleterm.nvim', version = "*", config = true},
       {
@@ -62,12 +112,12 @@ require("lazy").setup({
 	}
   	end,
   	dependencies = { {'nvim-tree/nvim-web-devicons'} }
-      };
+      },
       {
           'nvim-treesitter/nvim-treesitter',
       },
-      'theprimeagen/harpoon',
       'mbbill/undotree',
+      'theprimeagen/harpoon',
       'neovim/nvim-lspconfig',
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/nvim-cmp',
@@ -81,3 +131,18 @@ require("lazy").setup({
   checker = { enabled = false },
 })
 vim.cmd([[highlight Comment guifg=#c0c0c0 ctermfg=250]])
+-- Evita que o NvimTree seja adicionado sem querer
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "NvimTree",
+  callback = function()
+    -- Remove NvimTree da lista se ele foi adicionado
+    local harpoon = require("harpoon.mark")
+    local files = harpoon.get_marked_files()
+
+    for i, file in ipairs(files) do
+      if file.filename:match("NvimTree") then
+        harpoon.rm_file(i)
+      end
+    end
+  end,
+})
