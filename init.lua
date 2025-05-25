@@ -58,6 +58,10 @@ require("lazy").setup({
           lazy = false
       },
       {
+        "ThePrimeagen/vim-be-good",
+        cmd = "VimBeGood"
+      },
+      {
         'pocco81/auto-save.nvim',
         config = function()
           require("auto-save").setup {
@@ -131,18 +135,4 @@ require("lazy").setup({
   checker = { enabled = false },
 })
 vim.cmd([[highlight Comment guifg=#c0c0c0 ctermfg=250]])
--- Evita que o NvimTree seja adicionado sem querer
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "NvimTree",
-  callback = function()
-    -- Remove NvimTree da lista se ele foi adicionado
-    local harpoon = require("harpoon.mark")
-    local files = harpoon.get_marked_files()
 
-    for i, file in ipairs(files) do
-      if file.filename:match("NvimTree") then
-        harpoon.rm_file(i)
-      end
-    end
-  end,
-})
