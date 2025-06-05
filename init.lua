@@ -62,6 +62,18 @@ require("lazy").setup({
         cmd = "VimBeGood"
       },
       {
+        "rmagatti/auto-session",
+        config = function()
+        require("auto-session").setup({
+          log_level = "error",
+          auto_session_suppress_dirs = { "~/", "~/Downloads", "/" },
+          auto_restore_enabled = true,
+          auto_session_enable_last_session = false,
+          auto_session_root_dir = vim.fn.stdpath("config") .. "/sessions/",
+        })
+        end,
+      },
+      {
         'pocco81/auto-save.nvim',
         config = function()
           require("auto-save").setup {
@@ -134,5 +146,6 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = false },
 })
+vim.g.vim_markdown_folding_disabled = 1
 vim.cmd([[highlight Comment guifg=#c0c0c0 ctermfg=250]])
 

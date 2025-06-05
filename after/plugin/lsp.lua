@@ -1,5 +1,11 @@
 vim.opt.signcolumn = 'yes'
-
+vim.diagnostic.config({
+  virtual_text = true,   -- mostra o texto inline
+  signs = true,          -- ícones na lateral
+  underline = true,      -- sublinha erros/warnings
+  update_in_insert = false, -- evita mostrar enquanto digita
+  severity_sort = true,  -- ordena por severidade (erro > warning)
+})
 
 local lspconfig_defaults = require('lspconfig').util.default_config
 lspconfig_defaults.capabilities = vim.tbl_deep_extend(
@@ -22,7 +28,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
     vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
     vim.keymap.set({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
-    vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+    vim.keymap.set('n', '<leader>.', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
   end,
 })
 
